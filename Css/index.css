@@ -1,0 +1,450 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0;
+}
+ 
+html{
+    scroll-behavior: smooth;
+}
+
+
+.logo img{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+#loader
+{
+    position: fixed;
+    width:100%;
+    height:100vh;
+    /* background:#fff url("https:/") no-repeat center; */
+    background-size: cover;
+    z-index: 99999;
+}
+
+#backtotop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    color:black;
+    z-index: 9;
+    opacity: 0.6;
+    background-color: blue;
+    display: none;
+}
+
+
+
+.Searchhead {
+    background-color: #b51714;
+}
+.Searchhead h1{
+    font-size: 4rem;
+    color: #ffffff;
+}
+.SearchInput{
+   width: 100vw;
+   height: 50px;
+   border: 2px solid red;
+   margin: 10px;
+}
+
+.SearchInput input{
+    width: 100%;
+    height: 50px;
+    caret-color: #b51714;
+    border: none;
+   
+}
+.ImgSearch{
+    
+    height: 100vh;
+    width: 100vw;
+    
+     
+}
+.ImgSearch img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar_style{
+    
+    background-color:darkred !important;
+}
+.navbar_style a{
+    color:#ffffff;
+}
+
+.active{
+    background-color: green;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+
+.help{
+    background-color: #ffed75;
+    padding: 3px;
+    margin-top: 70px;
+    width: 100%;
+}
+.help .site-meta{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: #b51714;
+}
+
+.help .site-meta a{
+
+    color:#b51714;
+    text-decoration: none;
+}
+
+
+.MainContent{
+    height: auto;
+    width: 100%;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("../Images/colorfulmask.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
+
+.leftside img{
+
+    animation: coronago 5s linear infinite;
+}
+
+@keyframes coronago {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.rightside h1{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    
+    color:white;
+    /* text-shadow: 0px 0px 10px rgba(61, 8, 8, 0.7), 3px 3px 4px white; */
+}
+
+
+#change:after {
+    color: lime;
+    content: "";
+    /* border-right: 2px solid yellow; */
+    overflow: hidden;
+    animation: changeType 5s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes changeType {
+    0% {
+        content: "Safe";
+
+    }
+
+    50% {
+        content: "Home";
+    }
+
+    100% {
+        content: "Healthy";
+    }
+}
+
+
+.Covid19Das{
+
+    height: auto;
+    width: 100vw;
+    padding: 15px;
+   
+}
+
+.Covid19Das .covid-block{
+    border: 2px solid black;
+    height: 40%;
+    width: 60%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #161625;    
+    color:#ffffff;
+    border-radius: 15px;
+    border: #161625;
+    
+}
+
+.sub_section{
+
+    background-color: #cae9ff;
+
+}
+
+.sub_section .covid-block2{
+    margin: 15px;
+    
+}
+
+.Symptoms{
+ 
+     /* background-color:#192a56; */
+     background-attachment: fixed;
+}
+
+.technical{
+    background-color: #ff4000;
+    color:#ffffff;
+    padding: 10px;
+    font-size: 2rem;
+    
+}
+
+.technical h6 a{
+
+     color:#ffffff;
+     text-decoration: none;
+}
+
+
+#Spreads{
+
+    height: 100%;
+    position:relative;
+   
+}
+
+.spreadimg{
+    width: 200px;
+    height: 300px;
+    /* border-radius: 50%; */
+}
+
+.spreadimg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
+    
+  }
+
+
+ .swiper-slide:before{
+
+     content:"";
+     position: absolute;
+     top:0;
+     left:0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+     z-index: 2;
+     transition: 0.5s all;
+     opacity: 0;
+ }
+
+ .swiper-slide:hover:before{
+     opacity: 1;
+     box-shadow: 2px 2px 5px 3px rgb(161, 221, 57);
+ }
+
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide h3{
+      position: absolute;
+      bottom:0%;
+      left: 20%;
+      z-index: 3;
+      color:#fff;
+      opacity: 0;
+      transition: 0.5s all;
+  }
+
+  .swiper-slide:hover h3{
+      opacity: 1;
+      bottom:30%;
+  }
+
+
+
+
+#Prevention{
+
+
+    height: auto;
+    width: 100vw;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://cdn.pixabay.com/photo/2020/03/22/16/17/coronavirus-4957673_960_720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.card{
+    box-shadow: 2px 2px 10px 1px rgba(255,255,255,0.5);
+    transition: all 1s linear;
+}
+.card:hover{
+    cursor: pointer;
+    
+    transform: scale(1.09) !important;
+    box-shadow: 2px 2px 10px 1px blue;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+footer h5{
+
+    text-align: left;
+    margin-bottom: 20px;
+}
+footer .footerlinks{
+    display: block;
+    text-align: left;
+    color: rgba(255,255,255,0.5);
+    margin:5px;
+}
+
+footer .footerlinks a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+  
+}
+footer .footerlinks a:hover{
+    color:#d63031;
+}
+
+footer .footer-contact{
+    text-align: left;
+    margin: 10px;
+    display: flex;
+    margin-left: auto;
+}
+footer .footer-contact span a{
+    text-decoration: none;
+    color:rgba(255,255,255,0.5);
+}
+footer .footer-contact span a:hover{
+
+    color:#d63031;
+}
+footer .footer-contact span:last-child{
+    color:rgba(255,255,255,0.5);
+}
+
+
+@media screen and (max-width:995px) {
+    #framehead{
+        margin: auto !important;
+        display: flex;
+        justify-content: center;
+    }
+    #framebody{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto !important;
+        margin-top: 20px !important;
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width:768px) {
+
+    
+    .technical{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width:565px) {
+ 
+     .leftside img{
+         height: 100%;
+         width: 60%;
+         cursor:move;
+     }
+
+     #framehead{
+         margin: auto !important;
+         display: flex;
+         justify-content: center;
+     }
+     #frame{
+         width: 90%;
+         
+     }
+}
+
+
+@media screen and (max-width:450px) {
+    
+
+    .card{
+
+        max-width: 70% !important;
+        
+    }
+
+    
+}
