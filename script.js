@@ -42,6 +42,39 @@ function realtimeClock() {
 
 }
 
+// Fetching Real time Data World Wise
+const WorldCovidData = () =>{
+
+     fetch("https://covid-simple-api.vercel.app/api/world").then((data)=>{
+ 
+              return data.json();
+      
+     }).then((result) =>{
+
+         let TotalCasestemp = document.getElementById("TotalCases");
+         let ActiveCasestemp = document.getElementById("Active");
+         let Dischargedtemp = document.getElementById("Discharged");
+         let Deathstemp = document.getElementById("Deaths");
+               
+
+
+         TotalCasestemp.innerHTML = result.totalCases;
+         ActiveCasestemp.innerHTML = result.activeCases;
+         Dischargedtemp.innerHTML = result.recovered;
+         Deathstemp.innerHTML = result.deaths;
+
+
+              
+     }).catch((error) => {
+         
+          console.log(error);
+     });
+
+
+}
+
+WorldCovidData();
+
 
 
 //Fetching Real Time Covid Data Country Wise From Url
@@ -55,9 +88,9 @@ function Covid19Data() {
 
         let Countries = result.Countries;
         let tbody = document.getElementById("tablevalue").querySelector("tbody");
-        Countries.forEach((element, index) => {
+        Countries.forEach((element) => {
 
-            console.log(element.Country);
+           
             tbody.innerHTML += `<tr><td>${element.Country}</td><td>${element.TotalConfirmed}</td> <td>${element.TotalRecovered}</td><td>${element.TotalDeaths}</td> <td>${element.NewRecovered}</td> <td>${element.NewDeaths}</td></tr>`
 
 

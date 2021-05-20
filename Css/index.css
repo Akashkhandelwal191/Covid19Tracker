@@ -1,24 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=PT+Sans+Narrow&display=swap');
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 body{
    
     position: relative;
+    font-family: 'Noto Sans', sans-serif;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     margin: 0;
+    transition: all 1s linear;
 }
  
 html{
     scroll-behavior: smooth;
+    transition: all 1s linear;
     overflow-x: hidden;
     margin: 0;
-
 }
+
 
 
 .logo img{
@@ -26,7 +29,14 @@ html{
     width: 50px;
 }
 
-
+.c1{
+    border: 2px ridge red;
+    box-shadow: 2px 2px 9px 4px red !important;
+}
+.c2{
+    border: 2px ridge lightgreen;
+    box-shadow: 2px 2px 10px 5px green;
+}
 
 #loader
 {
@@ -47,40 +57,105 @@ html{
     border-radius: 50%;
     color:black;
     z-index: 9;
-    opacity: 0.6;
+    opacity: 0.7;
     background-color: blue;
     display: none;
 }
 
+#backtotop:hover{
+    opacity: 1;
+}
 
+.section_header h1{
+    color:#ffffff;
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+}
 
 .Searchhead {
     background-color: #b51714;
 }
 .Searchhead h1{
-    font-size: 4rem;
+    font-size: 2rem;
     color: #ffffff;
 }
-.SearchInput{
-   width: 100vw;
-   height: 50px;
-   border: 2px solid red;
-   margin: 10px;
-}
 
-.SearchInput input{
-    width: 100%;
-    height: 50px;
-    caret-color: #b51714;
-    border: none;
+
+.SearchMain{
+    max-width: 450px;
+    margin: auto;
+    position: relative;
+    box-shadow: 2px 2px 10px 10px rgba(0,0,0,0.8);
+    border-radius: 5px;
    
 }
+
+.Selection{
+
+    height: 40px;
+    
+    max-width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161625;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  
+    
+}
+.SearchInput{
+   
+   height: 60px;
+   width: 100%;
+ 
+   background-color: #161625;
+   font-size: 1.7rem;
+   caret-color: #b51714;
+   
+   color:rgba(255,255,255,0.8);
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  
+   border: none;
+   outline: none;
+   font-weight: lighter;
+     
+}
+
+
+#errorMessage{
+    padding: 5px;
+    
+}
+
+.errorMessage{
+    display: none;
+}
+
+.SearchProgress{
+
+   display: none;
+}
+
+.SearchIcon{
+    position: absolute;
+    top:15%;
+    right: 2%;
+    font-size: 20px;
+    color:#fff;
+    cursor: pointer;
+
+}
+
 .ImgSearch{
     
     height: 100vh;
     width: 100vw;
-    
-     
+        
 }
 .ImgSearch img{
     object-fit: cover;
@@ -98,7 +173,7 @@ html{
 }
 
 .active{
-    background-color: green;
+    background-color: #0984e3;
     border-radius: 25px;
     padding: 10px;
 }
@@ -188,6 +263,7 @@ html{
     height: auto;
     width: 100vw;
     padding: 15px;
+    transition: all 1s linear;
    
 }
 
@@ -201,6 +277,7 @@ html{
     color:#ffffff;
     border-radius: 15px;
     border: #161625;
+    box-shadow: 2px 2px 2px 4px rgba(0,0,0,0.8);
     
 }
 
@@ -240,7 +317,7 @@ html{
 
     height: 100%;
     position:relative;
-   
+   background-color: #273c75;
 }
 
 .spreadimg{
@@ -334,6 +411,21 @@ html{
 
 
 }
+
+
+#Contact{
+
+
+    background: #6c5ce7;
+
+}
+
+.form-control:focus{
+    /* box-shadow: 2px 2px 10px 5px green; */
+    background-color: #161625;
+    color:#ffffff;
+}
+
 
 .card{
     box-shadow: 2px 2px 10px 1px rgba(255,255,255,0.5);
@@ -452,6 +544,13 @@ footer .footer-contact span:last-child{
         max-width: 70% !important;
         
     }
-
+    .SearchMain{
+        max-width: 400px;
+        width: 350px;
+    }
+    .SearchInput{
+        font-size: 1.5rem;
+        
+    }
     
 }
