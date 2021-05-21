@@ -10,6 +10,7 @@ var title = document.getElementById("title");
 var errorMessage = document.getElementById("errorMessage");
 var SearchProgress = document.getElementById("SearchProgress");
 var Covid19Das = document.getElementById("Covid19Das");
+var ctx = document.getElementById('myChart').getContext('2d');
 
 
 SearchInput.addEventListener("keyup", function () {
@@ -65,6 +66,9 @@ SearchIcon.addEventListener("click", () => {
                         Discharged.innerHTML = element.recovered;
                         Deaths.innerHTML = element.deaths;
 
+                        window.myChart.destroy();
+                        UpdateGraphData(element.cases,element.active,element.recovered,element.deaths);
+
                     }
 
 
@@ -114,6 +118,9 @@ SearchIcon.addEventListener("click", () => {
                         active.innerHTML = element.active;
                         Discharged.innerHTML = element.cured;
                         Deaths.innerHTML = element.deaths;
+
+                        window.myChart.destroy();
+                        UpdateGraphData(element.noOfCases,element.active,element.cured,element.deaths);
                     }
 
                 });
@@ -163,7 +170,9 @@ const IndiaCovid19TotalData = () => {
         active.innerHTML = element.active;
         Discharged.innerHTML = element.recovered;
         Deaths.innerHTML = element.deaths;
-
+        
+        UpdateGraphData(element.confirmed,element.active,element.recovered,element.deaths);
+       
 
 
     }).catch((error) => {
@@ -208,3 +217,62 @@ const IndiaCovid19Data = () => {
 
 IndiaCovid19Data();
 
+
+
+
+function UpdateGraphData(TotalCases,Active,Recoverd,Deaths){
+
+
+    window.myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['TotalCases', 'Active', 'Recoverd', "Deaths"],
+            datasets: [{
+                label: 'India Total Cases',
+                data: [TotalCases,Active,Recoverd,Deaths],
+                backgroundColor: [
+                    '#d63031',
+                    '#0984e3',
+                    '#00b894',
+                    '#ff3f34',
+                ],
+                borderColor: [
+                    '#fff',
+                    '#fff',
+                    '#fff',
+                    '#fff',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: false,
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                },
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels:{
+                        color:"#fff",
+                        font:{
+                            size:15
+                        }
+                    }
+                },
+                
+            },
+    
+             animation: {
+                duration: 5000,
+                easing: "linear",
+            },
+        },
+    });
+
+}

@@ -62,6 +62,22 @@ html{
     display: none;
 }
 
+#backtohome{
+    position: absolute;
+    left: 0px;
+    top:10px;
+    cursor: pointer;
+    background-color: #161625;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 15px;
+    
+
+}
+
 #backtotop:hover{
     opacity: 1;
 }
@@ -125,6 +141,11 @@ html{
    font-weight: lighter;
      
 }
+
+.graph{
+    opacity: 0.7;
+}
+
 
 
 #errorMessage{
@@ -262,8 +283,9 @@ html{
 
     height: auto;
     width: 100vw;
-    padding: 15px;
+   
     transition: all 1s linear;
+    
    
 }
 
@@ -551,6 +573,11 @@ footer .footer-contact span:last-child{
     .SearchInput{
         font-size: 1.5rem;
         
+    }
+
+    #myChart{
+        height: 360px !important;
+        width: 360px !important;
     }
     
 }
