@@ -8,6 +8,11 @@ function myFunction() {
 
 }
 
+window.addEventListener("load",function(){
+ 
+     
+
+});
 
 
 //Real Time Clock
@@ -42,6 +47,10 @@ function realtimeClock() {
 
 }
 
+
+
+
+
 // Fetching Real time Data World Wise
 const WorldCovidData = () =>{
 
@@ -64,6 +73,28 @@ const WorldCovidData = () =>{
          Deathstemp.innerHTML = result.deaths;
 
 
+         let t = result.totalCases;
+         let a = result.activeCases;
+         let d = result.recovered;
+         let de = result.deaths;
+
+         var arrop = [t,a,d,de];
+
+         
+         let arrdone = arrop.map(function(element){
+              
+               
+                   element = element.replace(/\,/g,'');
+                   element = Number(element);
+                   return element;            
+
+         });
+
+         UpdateGraphData(...arrdone);
+
+        
+          
+        
               
      }).catch((error) => {
          
@@ -140,5 +171,62 @@ topscroll.addEventListener("click", function () {
 
 
 
+function UpdateGraphData(TotalCases,Active,Recoverd,Deaths)
+{
 
+ 
+   var ctx = document.getElementById('myChart2').getContext('2d');
 
+    var myChart2 = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['TotalCases', 'Active', 'Recoverd', "Deaths"],
+            datasets: [{
+                label: 'Total Global Cases',
+                data: [TotalCases,Active,Recoverd,Deaths],
+                backgroundColor: [
+                    '#d63031',
+                    '#0984e3',
+                    '#00b894',
+                    '#ff3f34',
+                ],
+                borderColor: [
+                    '#fff',
+                    '#fff',
+                    '#fff',
+                    '#fff',
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: false,
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0,
+                },
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels:{
+                        color:"black",
+                        font:{
+                            size:15
+                        }
+                    }
+                },
+                
+            },
+    
+             animation: {
+                duration: 5000,
+                easing: "linear",
+            },
+        },
+    });
+
+}

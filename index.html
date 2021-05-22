@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +11,7 @@
 
   <!-- Animation Library CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
   <!-- BootStrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -24,6 +24,7 @@
 
   <!-- Custom Css -->
   <link rel="stylesheet" href="Css/index.css">
+
   <!-- Web Fonts Css -->
   <link rel="stylesheet" href="Css/all.css">
 
@@ -45,8 +46,6 @@
       })
     });
   </script>
-
-
 
 </head>
 
@@ -103,14 +102,12 @@
       </div>
     </div>
   </nav>
-
   <!-- header Section End   -->
 
 
 
   <!-- Home Section Start -->
   <section id="Home">
-
     <div class="container-fluid help">
       <div class="row">
         <div class="col-xs-12 text-center">
@@ -221,10 +218,16 @@
 
 
 
+      <div class="d-flex justify-content-center my-5">
+        <canvas id="myChart2" aria-label="chart" role="img" height="500" width="500"></canvas>
+      </div>
+
+
 
       <div class="table-responsive my-5 container">
 
-        <table class="table table-striped table-bordered border-primary table-hover table-dark text-center" id="tablevalue">
+        <table class="table table-striped table-bordered border-primary table-hover table-dark text-center"
+          id="tablevalue">
           <thead>
             <tr>
               <th class="bg-primary">Country</th>
@@ -248,13 +251,11 @@
     </div>
 
   </section>
-
   <!-- Covid-19 Live Update Dashboard Section End -->
 
 
 
   <!-- About Section Start -->
-
   <section id="About">
 
 
@@ -273,7 +274,6 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen id="frame"></iframe>
-
         </div>
 
 
@@ -298,7 +298,6 @@
     </div>
 
   </section>
-
   <!-- About Section End -->
 
 
@@ -365,10 +364,7 @@
 
   <!-- Prevention Section Start -->
   <section id="Prevention">
-
-
-
-
+    
     <div class="container-fluid  pt-4 pb-4">
 
       <div class="section_header text-center text-white mb-4 mt-4">
@@ -490,24 +486,26 @@
 
 
     </div>
-
-
-
   </section>
   <!-- Prevention Section End -->
 
-
+  
 
 
   <!-- Contact Form Section Start -->
   <section id="Contact">
 
+    <div class="PopUp" id="PopUp">
+     <i class="fas fa-2x my-1 mb-1" id="PopUpIcon"></i>
+     <h5 class="my-1 mb-1 text-center" id="PopUpText"></h5>
+     <div class="my-1 mb-1">
+     <button type="button" class="PopUpbtn" id="PopUpbtn">Ok</button>
+     </div>
+    </div>
 
     <div class="section_header text-center  mb-4 mt-4">
       <h1>Contact Us</h1>
     </div>
-
-
 
     <div class="row justify-content-center SubContact mb-3">
       <div class="col-md-12">
@@ -515,7 +513,7 @@
           <div class="row no-gutters mb-5">
             <div class="col-md-12">
               <div class="contact-wrap w-100 p-md-5 p-4">
-                <form method="GET" action="Search.html" id="contactForm" name="contactForm" class="contactForm" autocomplete="off">
+                <form method="POST" id="contactForm" name="contactForm" class="contactForm" autocomplete="off">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -557,9 +555,6 @@
         </div>
       </div>
     </div>
-
-
-
 
   </section>
   <!-- Contact Form Section End -->
@@ -651,32 +646,29 @@
     crossorigin="anonymous"></script>
 
   
-  
+
+  <!-- Chart JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
   <!-- Swiper Js -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Aos Library  -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 
   <!-- Jquery Validate Plugin -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 
+
+
   <!-- Custom Javascript -->
   <script src="script.js"></script>
 
-  <!-- Custom Form Validation Js -->
-  <script src="Validate.js"></script>
 
 
-  <!-- Aos Init Script -->
-  <script>
-    AOS.init({
-      offset: 300,
-      duration: 1100,
-    });
-  </script>
+
+
 
 
   <!-- Initialize Swiper -->
@@ -703,6 +695,18 @@
     });
   </script>
 
+
+  <!-- Aos Library  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Aos Init Script -->
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1100,
+    });
+  </script>
+
   <!-- ToolTip Intilizer -->
   <script>
     $(function () {
@@ -712,6 +716,15 @@
   </script>
 
 
-</body>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  <!-- Custom Form Validation Js -->
+  <script src="Validate.js"></script>
+
+
+
+
+</body>
 </html>
