@@ -560,6 +560,10 @@ footer .footer-contact span:last-child{
     color:rgba(255,255,255,0.5);
 }
 
+footer .footer-contact img{
+    height: 30px;
+    width: 30px;
+}
 
 @media screen and (max-width:995px) {
     #framehead{

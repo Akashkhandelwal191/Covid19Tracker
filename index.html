@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -78,10 +79,10 @@
             <a class="nav-link active" aria-current="page" href="#Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#Dasboard">Covid-19 Dashboard</a>
+            <a class="nav-link active" aria-current="page" href="#Dasboard">Global Covid-19 Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Search.html">Search Covid-19 Dashboard</a>
+            <a class="nav-link active" aria-current="page" href="Search.html" title="India Total Cases/Sate Wise Case(Site that Opens in a new Window)">India Covid-19 Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#About">About</a>
@@ -162,7 +163,7 @@
 
 
   <!-- Covid-19 Live Update Dashboard Section Start -->
-  <section id="Dasboard">
+  <section id="Dasboard" class="my-4">
 
     <div class="Covid19Das">
 
@@ -170,7 +171,7 @@
         <h3 class="text-center text-uppercase">Covid-19 Dashboard</h3>
       </div>
 
-      <div class="d-flex flex-md-row justify-content-md-around flex-column align-items-center">
+      <div class="d-flex flex-md-row justify-content-md-around flex-column align-items-center my-3">
 
         <div class="text-center covid-block">
           <h1 class="count text-danger" id="TotalCases">0</h1>
@@ -364,7 +365,7 @@
 
   <!-- Prevention Section Start -->
   <section id="Prevention">
-    
+
     <div class="container-fluid  pt-4 pb-4">
 
       <div class="section_header text-center text-white mb-4 mt-4">
@@ -489,18 +490,18 @@
   </section>
   <!-- Prevention Section End -->
 
-  
+
 
 
   <!-- Contact Form Section Start -->
   <section id="Contact">
 
     <div class="PopUp" id="PopUp">
-     <i class="fas fa-2x my-1 mb-1" id="PopUpIcon"></i>
-     <h5 class="my-1 mb-1 text-center" id="PopUpText"></h5>
-     <div class="my-1 mb-1">
-     <button type="button" class="PopUpbtn" id="PopUpbtn">Ok</button>
-     </div>
+      <i class="fas fa-2x my-1 mb-1" id="PopUpIcon"></i>
+      <h5 class="my-1 mb-1 text-center" id="PopUpText"></h5>
+      <div class="my-1 mb-1">
+        <button type="button" class="PopUpbtn" id="PopUpbtn">Ok</button>
+      </div>
     </div>
 
     <div class="section_header text-center  mb-4 mt-4">
@@ -580,44 +581,120 @@
 
       <div class="row">
 
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h5 class="my-2">Quick Links</h5>
-          <span class="footerlinks"><a href="#home">Home</a></span>
-          <span class="footerlinks"><a href="#myskills">About</a></span>
-          <span class="footerlinks"><a href="#AboutMe">Symptoms</a></span>
-          <span class="footerlinks"><a href="#Project">Prevention</a></span>
-          <span class="footerlinks"><a href="#contact">Contact Us</a></span>
-        </div>
-        <div class="col-md-4">
-          <h5 class="my-2">Popular Apps</h5>
-          <span class="footerlinks"><a href="https://m.facebook.com/akash.khandelwal.1042?ref=bookmarks"
-              target="_blank">Co-WIN</a></span>
-          <span class="footerlinks"><a href="https://twitter.com/skykhandelwal26" target="_blank">Aarogya
-              Setu</a></span>
-          <span class="footerlinks"><a href="https://www.instagram.com/skykhandelwal1999"
-              target="_blank">UMANG</a></span>
-          <span class="footerlinks"><a href="https://www.linkedin.com/in/akash-khandelwal-5b09531aa"
-              target="_blank">MyGov</a></span>
+          <span class="footerlinks"><a href="#Home">Home</a></span>
+          <span class="footerlinks"><a href="#Dasboard">Global Covid-19 Dashboard</a></span>
+          <span class="footerlinks"><a href="Search.html">India Covid-19 Dasboard</a></span>
+          <span class="footerlinks"><a href="#About">About</a></span>
+          <span class="footerlinks"><a href="#Symptoms">Symptoms</a></span>
+          <span class="footerlinks"><a href="#Spreads">How it Spreads</a></span>
+          <span class="footerlinks"><a href="#Prevention">Prevention</a></span>
+          <span class="footerlinks"><a href="#Contact">Contact Us</a></span>
+          <span class="footerlinks"><a  target="_blank" href="https://self4society.mygov.in/covid-resources/?utm_source=MyGov&utm_medium=MyGovCovid-19" title="external site that opens in a new window">Covid-19 Resources</a></span>
 
         </div>
-        <div class="col-md-4">
-          <h5 class="my-2">Get In Touch</h5>
+        <div class="col-md-3">
+          <h5 class="my-2">Popular Apps</h5>
+          <span class="footerlinks"><a href="https://selfregistration.cowin.gov.in/" target="_blank">Co-WIN</a></span>
+          <span class="footerlinks"><a href="https://www.aarogyasetu.gov.in/applink/" target="_blank">Aarogya
+              Setu</a></span>
+          <span class="footerlinks"><a
+              href="https://web.umang.gov.in/web_new/login?redirect_to=&utm_source=MyGov&utm_medium=MyGovCovid-19"
+              target="_blank">UMANG</a></span>
+          <span class="footerlinks"><a href="https://www.mygov.in/" target="_blank">MyGov</a></span>
+
+        </div>
+
+        <div class="col-md-3">
+
+          <h5 class="my-2">Activities</h5>
+
+          <span class="footerlinks"><a href="https://www.mygov.in/groups/" target="_blank">Groups</a></span>
+          <span class="footerlinks"><a href="https://www.mygov.in/campaigns/" target="_blank">Campaigns
+              Setu</a></span>
+          <span class="footerlinks"><a
+              href="https://www.mygov.in/podcast/"
+              target="_blank">PodCast</a></span>
+          <span class="footerlinks"><a href="https://quiz.mygov.in/" target="_blank">MyGov Quiz</a></span>
+          <span class="footerlinks"><a href="https://www.mygov.in/home/blog/" target="_blank">Blogs</a></span>
+
+          <span class="footerlinks"><a href="https://www.mygov.in/cards/" target="_blank">Wall Of Fame</a></span>
+          <span class="footerlinks"><a href="https://www.mygov.in/weekly-newsletter/" target="_blank">Weekly Newsletter</a></span>
+
+
+        </div>
+
+
+        <div class="col-md-3">
+          <h5 class="my-2">Mygov Social Hub</h5>
+
           <div class="footer-contact">
-            <span class="mx-2"><i class="fas fa-user"></i></span>
-            <span>Akash Khandelwal</span>
+            <span class="mx-2"><img src="images/whatsapp.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank"
+                href="https://api.whatsapp.com/send/?phone=919013151515&text=Hi&app_absent=0">+91-9013151515 <br>
+                <p>Whatsapp</p>
+              </a></span>
+
           </div>
+
           <div class="footer-contact">
-            <span class="mx-2"><i class="fas fa-map-marker-alt"></i></span>
-            <span>Jabalpur,Madhya Pradesh,India</span>
+            <span class="mx-2"><img src="images/messenger.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank"
+                href="https://www.messenger.com/login.php?next=https%3A%2F%2Fwww.messenger.com%2Ft%2FMyGovIndia">MyGovIndia
+                <br>
+                <p>Facebook Messenger</p>
+              </a></span>
+
           </div>
+
           <div class="footer-contact">
-            <span class="mx-2"><i class="fas fa-phone"></i></span>
-            <span><a href="tel:9993869873">+91 9993869873</a></span>
+            <span class="mx-2"><img src="images/facebook.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank" href="https://www.facebook.com/MyGovIndia/">@MyGovIndia <br>
+                <p>Facebook Page</p>
+              </a></span>
+
           </div>
+
           <div class="footer-contact">
-            <span class="mx-2"><i class="fas fa-envelope"></i></span>
-            <span><a href="mailto:skykhandelwal1999@gmail.com">
-                skykhandelwal1999@gmail.com</a></span>
+            <span class="mx-2"><img src="images/telegram.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank" href="https://t.me/MyGovCoronaNewsdesk">MyGovCorona <br>
+                <p>NewsDesk Telegram</p>
+              </a></span>
+
+          </div>
+
+          <div class="footer-contact">
+            <span class="mx-2"><img src="images/instagram.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank" href="https://www.instagram.com/mygovindia/">@MyGovIndia <br>
+                <p>Instagram Page</p>
+              </a></span>
+
+          </div>
+
+          <div class="footer-contact">
+            <span class="mx-2"><img src="images/twitter.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank" href="https://twitter.com/mygovindia">@MyGovIndia <br>
+                <p>Twitter Page</p>
+              </a></span>
+
+          </div>
+
+          <div class="footer-contact">
+            <span class="mx-2"><img src="images/linkedin.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank" href="https://www.linkedin.com/company/mygov-india/">@MyGovIndia <br>
+                <p>Linkedin Page</p>
+              </a></span>
+
+          </div>
+
+
+          <div class="footer-contact">
+            <span class="mx-2"><img src="images/youtube.svg" class="img-fluid" alt=""></span>
+            <span><a target="_blank" href="https://www.youtube.com/mygovindia">@MyGovIndia <br>
+                <p>YouTube Page</p>
+              </a></span>
+
           </div>
 
         </div>
@@ -645,7 +722,7 @@
     integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
     crossorigin="anonymous"></script>
 
-  
+
 
   <!-- Chart JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -727,4 +804,5 @@
 
 
 </body>
+
 </html>
