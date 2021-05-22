@@ -44,7 +44,7 @@ html{
     position: fixed;
     width:100%;
     height:100vh;
-    background:url("https://cdn.dribbble.com/users/1382518/screenshots/6515787/genericloader_alchemy_gen.gif") no-repeat center;
+    background:#fff url("https://1.bp.blogspot.com/-tM8Z7VPNn5Q/WMkr9sb6qyI/AAAAAAAAA9s/IjGPg8VFOkc41UWeaWuGY7eyJeCCEb82gCLcB/s1600/earth%2B.gif") no-repeat center;
     background-size: cover;
     z-index: 99999;
 }

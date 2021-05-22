@@ -1,5 +1,4 @@
 
-
 //PreLoader 
 var Preloader = document.getElementById("loader");
 function myFunction() {
@@ -7,12 +6,6 @@ function myFunction() {
     Preloader.style.display = "none";
 
 }
-
-window.addEventListener("load",function(){
- 
-     
-
-});
 
 
 //Real Time Clock
@@ -46,6 +39,9 @@ function realtimeClock() {
     var t = setTimeout(realtimeClock, 500);
 
 }
+
+realtimeClock();
+
 
 
 
